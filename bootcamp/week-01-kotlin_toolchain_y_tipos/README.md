@@ -128,6 +128,6 @@ Tiene que terminar con `BUILD SUCCESSFUL`. Si algo falla antes de llegar a los t
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| — | **Semana 01** | Semana 02 (próxima tanda) |
+| — | **Semana 01** | [Semana 02](../week-02-control_funciones_y_errores/README.md) |
 
 ← [Volver al inicio del bootcamp](../../README.md)
