@@ -125,6 +125,6 @@ Tiene que terminar con `BUILD SUCCESSFUL`. Los starters empiezan en rojo (`NotIm
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 03](../week-03-colecciones_y_lambdas/README.md) | **Semana 04** | Semana 05 (próxima tanda) |
+| [Semana 03](../week-03-colecciones_y_lambdas/README.md) | **Semana 04** | [Semana 05](../week-05-enums_sealed_y_genericos/README.md) |
 
 ← [Volver al inicio del bootcamp](../../README.md)
