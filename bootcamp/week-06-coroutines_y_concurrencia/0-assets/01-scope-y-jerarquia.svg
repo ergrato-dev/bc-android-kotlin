@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="#e6edf3" font-family="sans-serif" viewBox="0 0 760 330" role="img" aria-labelledby="t d"><title id="t">Scope y jerarquía de coroutines</title><desc id="d">Un scope tiene un Job padre y tres hijos. Si un hijo falla en un coroutineScope, el padre cancela a los hermanos y relanza el error. En un supervisorScope el fallo de un hijo no afecta a los hermanos.</desc><style>text{font:14px sans-serif;fill:#e6edf3}.b{fill:#16243d;stroke:#58a6ff;stroke-width:2}.f{fill:#2b2110;stroke:#d29922;stroke-width:2}.g{fill:#0f2d1a;stroke:#3fb950;stroke-width:2}.r{fill:#2d1115;stroke:#f85149;stroke-width:2}.s{font-size:12px;fill:#9aa4af}.l{stroke:#9aa4af;stroke-width:2;fill:none}</style><rect width="100%" height="100%" fill="#0d1117" rx="10"/><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#9aa4af"/></marker></defs>
+<rect class="b" x="10" y="15" width="365" height="300" rx="8"/><text x="25" y="42">coroutineScope</text><text class="s" x="25" y="62">el scope no termina hasta que terminan sus hijos</text>
+<rect class="b" x="135" y="80" width="115" height="38" rx="6"/><text x="160" y="104">Job padre</text>
+<path class="l" d="M165 118L85 160" marker-end="url(#a)"/><path class="l" d="M192 118L192 160" marker-end="url(#a)"/><path class="l" d="M220 118L300 160" marker-end="url(#a)"/>
+<rect class="g" x="35" y="162" width="100" height="38" rx="6"/><text x="52" y="186">hijo A</text>
+<rect class="r" x="142" y="162" width="100" height="38" rx="6"/><text x="159" y="186">hijo B ✗</text>
+<rect class="g" x="250" y="162" width="100" height="38" rx="6"/><text x="267" y="186">hijo C</text>
+<text class="s" x="25" y="232">B lanza una excepción:</text><text class="s" x="25" y="254">1. el padre se cancela</text><text class="s" x="25" y="276">2. A y C reciben CancellationException</text><text class="s" x="25" y="298">3. el error sube a quien llamó al scope</text>
+<rect class="f" x="385" y="15" width="365" height="300" rx="8"/><text x="400" y="42">supervisorScope</text><text class="s" x="400" y="62">los hijos fallan por separado</text>
+<rect class="f" x="510" y="80" width="115" height="38" rx="6"/><text x="525" y="104">SupervisorJob</text>
+<path class="l" d="M540 118L460 160" marker-end="url(#a)"/><path class="l" d="M567 118L567 160" marker-end="url(#a)"/><path class="l" d="M595 118L675 160" marker-end="url(#a)"/>
+<rect class="g" x="410" y="162" width="100" height="38" rx="6"/><text x="427" y="186">hijo A</text>
+<rect class="r" x="517" y="162" width="100" height="38" rx="6"/><text x="534" y="186">hijo B ✗</text>
+<rect class="g" x="625" y="162" width="100" height="38" rx="6"/><text x="642" y="186">hijo C</text>
+<text class="s" x="400" y="232">B falla:</text><text class="s" x="400" y="254">1. A y C siguen y terminan</text><text class="s" x="400" y="276">2. el error queda en el Deferred de B</text><text class="s" x="400" y="298">3. lo ves al hacer await(): captúralo ahí</text></svg>

@@ -137,6 +137,6 @@ Tu repositorio debe tener ya el `core` de la Bitácora con modelo tipado, lectur
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 04](../week-04-clases_objetos_e_interfaces/README.md) | **Semana 05** | Semana 06 (próxima tanda) |
+| [Semana 04](../week-04-clases_objetos_e_interfaces/README.md) | **Semana 05** | [Semana 06](../week-06-coroutines_y_concurrencia/README.md) |
 
 ← [Volver al inicio del bootcamp](../../README.md)
