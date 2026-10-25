@@ -137,6 +137,6 @@ Tu repositorio debe tener el `core` de la Bitácora completo: modelo tipado, lec
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 07](../week-07-flow_y_programacion_reactiva/README.md) | **Semana 08** | Semana 09 (próxima tanda) |
+| [Semana 07](../week-07-flow_y_programacion_reactiva/README.md) | **Semana 08** | [Semana 09](../week-09-gradle_por_dentro/README.md) |
 
 ← [Volver al inicio del bootcamp](../../README.md)

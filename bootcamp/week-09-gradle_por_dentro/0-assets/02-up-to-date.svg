@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="#e6edf3" font-family="sans-serif" viewBox="0 0 760 330" role="img" aria-labelledby="t d"><title id="t">Cómo decide Gradle si una tarea se ejecuta</title><desc id="d">Antes de ejecutar una tarea, Gradle compara sus entradas y salidas con las de la última vez. Si son iguales, la marca UP-TO-DATE. Si no, mira la caché de resultados: si hay una entrada con las mismas huellas, restaura la salida y marca FROM-CACHE. Si no, ejecuta la acción y guarda el resultado.</desc><style>text{font:14px sans-serif;fill:#e6edf3}.b{fill:#16243d;stroke:#58a6ff;stroke-width:2}.f{fill:#2b2110;stroke:#d29922;stroke-width:2}.g{fill:#0f2d1a;stroke:#3fb950;stroke-width:2}.r{fill:#2d1115;stroke:#f85149;stroke-width:2}.s{font-size:12px;fill:#9aa4af}.l{stroke:#9aa4af;stroke-width:2;fill:none}</style><rect width="100%" height="100%" fill="#0d1117" rx="10"/><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#9aa4af"/></marker></defs>
+<rect class="b" x="15" y="20" width="200" height="70" rx="8"/><text x="30" y="48">Huella de entradas</text><text class="s" x="30" y="70">@Input, @InputFile, código</text>
+<rect class="b" x="15" y="120" width="200" height="70" rx="8"/><text x="30" y="148">Huella de salidas</text><text class="s" x="30" y="170">@OutputFile, @OutputDirectory</text>
+<rect class="f" x="270" y="60" width="190" height="90" rx="8"/><text x="285" y="92">¿Igual que</text><text x="285" y="114">la última vez?</text>
+<path class="l" d="M215 55H268V85" marker-end="url(#a)"/><path class="l" d="M215 155H268V125" marker-end="url(#a)"/>
+<rect class="g" x="535" y="30" width="210" height="60" rx="8"/><text x="550" y="56">UP-TO-DATE</text><text class="s" x="550" y="76">no hace nada</text>
+<path class="l" d="M460 90L533 62" marker-end="url(#a)"/><text class="s" x="476" y="66">sí</text>
+<rect class="f" x="270" y="220" width="190" height="90" rx="8"/><text x="285" y="252">¿Hay un resultado</text><text x="285" y="274">en la caché?</text>
+<path class="l" d="M365 150V218" marker-end="url(#a)"/><text class="s" x="375" y="190">no</text>
+<rect class="g" x="535" y="120" width="210" height="60" rx="8"/><text x="550" y="146">FROM-CACHE</text><text class="s" x="550" y="166">restaura build/ sin ejecutar</text>
+<path class="l" d="M460 240L533 175" marker-end="url(#a)"/><text class="s" x="486" y="196">sí</text>
+<rect class="r" x="535" y="225" width="210" height="75" rx="8"/><text x="550" y="251">Se ejecuta</text><text class="s" x="550" y="271">acción + guarda en caché</text><text class="s" x="550" y="289">si es @CacheableTask</text>
+<path class="l" d="M460 270H533" marker-end="url(#a)"/><text class="s" x="474" y="262">no</text></svg>
