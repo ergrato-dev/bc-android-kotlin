@@ -122,6 +122,6 @@ Tiene que terminar con `BUILD SUCCESSFUL`. Los starters compilan y empiezan en r
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 06](../week-06-coroutines_y_concurrencia/README.md) | **Semana 07** | Semana 08 (próxima tanda) |
+| [Semana 06](../week-06-coroutines_y_concurrencia/README.md) | **Semana 07** | [Semana 08](../week-08-serialization_y_dsls/README.md) |
 
 ← [Volver al inicio del bootcamp](../../README.md)

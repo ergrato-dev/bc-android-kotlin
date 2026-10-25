@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="#e6edf3" font-family="sans-serif" viewBox="0 0 760 300" role="img" aria-labelledby="t d"><title id="t">Polimorfismo con sealed</title><desc id="d">La interfaz sellada Event tiene dos subtipos, Created y Cleared. Al escribir, el JSON lleva un campo type con el SerialName del subtipo. Al leer, se lee primero type para elegir el subtipo; un nombre desconocido es un error.</desc><style>text{font:14px sans-serif;fill:#e6edf3}.b{fill:#16243d;stroke:#58a6ff;stroke-width:2}.f{fill:#2b2110;stroke:#d29922;stroke-width:2}.g{fill:#0f2d1a;stroke:#3fb950;stroke-width:2}.r{fill:#2d1115;stroke:#f85149;stroke-width:2}.s{font-size:12px;fill:#9aa4af}.l{stroke:#9aa4af;stroke-width:2;fill:none}</style><rect width="100%" height="100%" fill="#0d1117" rx="10"/><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#9aa4af"/></marker></defs>
+<rect class="b" x="10" y="15" width="260" height="170" rx="8"/><text x="25" y="42">sealed interface Event</text>
+<rect class="g" x="30" y="65" width="220" height="45" rx="6"/><text class="s" x="42" y="84">@SerialName("created")</text><text class="s" x="42" y="102">Created(code)</text>
+<rect class="g" x="30" y="122" width="220" height="45" rx="6"/><text class="s" x="42" y="141">@SerialName("cleared")</text><text class="s" x="42" y="159">data object Cleared</text>
+<path class="l" d="M270 88L338 88" marker-end="url(#a)"/><path class="l" d="M270 145L338 145" marker-end="url(#a)"/>
+<rect class="f" x="340" y="65" width="410" height="45" rx="6"/><text class="s" x="355" y="93">{"type":"created","code":"A-1"}</text>
+<rect class="f" x="340" y="122" width="410" height="45" rx="6"/><text class="s" x="355" y="150">{"type":"cleared"}</text>
+<text class="s" x="340" y="48">escribir: añade el campo type</text>
+<rect class="b" x="10" y="205" width="740" height="80" rx="8"/><text x="25" y="232">leer</text>
+<text class="s" x="25" y="256">1. lee "type"   2. busca el subtipo con ese nombre   3. lee el resto con el serializador de ese subtipo</text>
+<text class="s" x="25" y="276">"type":"zzz" no existe: SerializationException. El discriminador se cambia con classDiscriminator.</text></svg>
