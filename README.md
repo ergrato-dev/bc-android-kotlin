@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/bootcamp-header.svg" alt="Bootcamp Android Kotlin: nativo, nivel experto, Gradle incluido" width="800">
+</p>
+
 # Bootcamp Android Kotlin — nivel experto
 
 Android nativo con Kotlin y Gradle desde cero hasta producción. 42 semanas x 14 h = 588 h.
