@@ -123,6 +123,6 @@ Tiene que terminar con `BUILD SUCCESSFUL`. Recuerda que los starters empiezan en
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 01](../week-01-kotlin_toolchain_y_tipos/README.md) | **Semana 02** | Semana 03 (próxima tanda) |
+| [Semana 01](../week-01-kotlin_toolchain_y_tipos/README.md) | **Semana 02** | [Semana 03](../week-03-colecciones_y_lambdas/README.md) |
 
 ← [Volver al inicio del bootcamp](../../README.md)
