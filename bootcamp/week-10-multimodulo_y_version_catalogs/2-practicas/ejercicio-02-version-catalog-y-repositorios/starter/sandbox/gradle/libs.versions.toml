@@ -1,0 +1,3 @@
+# Paso 1: crea aquí el catálogo (las secciones [versions], [libraries], [bundles] y [plugins]).
+# Los nombres de las entradas son los de los pasos del README; con ellos, los alias son libs.junit.bom,
+# libs.bundles.testing, libs.plugins.kotlin.jvm, etc.

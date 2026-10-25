@@ -1,0 +1,19 @@
+# Ya está lo que necesita el proyecto raíz (que ejecuta los tests de TestKit). Paso 2: añade lo que faltan,
+# con estos nombres: la versión `serialization` (1.12.0), las bibliotecas `serialization-bom` y
+# `serialization-json` (esta sin versión: la fija el BOM) y el plugin `kotlin-serialization`
+# (id org.jetbrains.kotlin.plugin.serialization, con la versión de Kotlin).
+
+[versions]
+kotlin = "2.4.21"
+junit = "6.1.3"
+
+[libraries]
+junit-bom = { module = "org.junit:junit-bom", version.ref = "junit" }
+junit-launcher = { module = "org.junit.platform:junit-platform-launcher" }
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+
+[bundles]
+testing = ["kotlin-test", "junit-launcher"]
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
