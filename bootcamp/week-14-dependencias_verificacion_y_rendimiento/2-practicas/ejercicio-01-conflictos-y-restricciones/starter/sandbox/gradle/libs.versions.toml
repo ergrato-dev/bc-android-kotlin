@@ -1,0 +1,16 @@
+[versions]
+kotlin = "2.4.21"
+coroutines = "1.11.0"
+serialization = "1.12.0"
+# Paso 2: añade aquí la versión de org.jetbrains:annotations que exige el equipo (ver README).
+
+[libraries]
+kotlinx-coroutines-bom = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-bom", version.ref = "coroutines" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core" }
+kotlinx-serialization-bom = { module = "org.jetbrains.kotlinx:kotlinx-serialization-bom", version.ref = "serialization" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json" }
+# Paso 2: y aquí la biblioteca, con esa versión.
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
