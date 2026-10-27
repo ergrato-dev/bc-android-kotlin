@@ -123,6 +123,6 @@ Tiene que terminar con `BUILD SUCCESSFUL`. Los starters compilan y los tests emp
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 12](../week-12-plugins_propios_y_extensiones/README.md) | **Semana 13** | Semana 14 (próxima tanda) |
+| [Semana 12](../week-12-plugins_propios_y_extensiones/README.md) | **Semana 13** | [Semana 14](../week-14-dependencias_verificacion_y_rendimiento/README.md) |
 
 ← [Volver al inicio del bootcamp](../../README.md)
