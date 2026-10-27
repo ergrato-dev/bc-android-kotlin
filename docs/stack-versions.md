@@ -1,6 +1,6 @@
 # Versiones del stack
 
-Última revisión: 2026-10-24. Regla: versión completa pinada, nunca `latest`. Antes de fijar una versión: el tag existe, sin CVEs sin parchear, compatibilidad entre piezas.
+Última revisión: 2026-10-26. Regla: versión completa pinada, nunca `latest`. Antes de fijar una versión: el tag existe, sin CVEs sin parchear, compatibilidad entre piezas.
 
 | Pieza | Versión pinada | Verificación |
 |---|---|---|
@@ -11,6 +11,7 @@
 | Compose BOM | 2026.09.00 | Último en Google Maven. |
 | kotlinx.coroutines (BOM) | 1.11.0 | Último estable en Maven Central y GitHub `Kotlin/kotlinx.coroutines` (2026-05-08). Sin avisos de seguridad en GitHub ni resultados en NVD. Se fija el BOM `kotlinx-coroutines-bom` para `core` y `test`. `currentTime` y `produce` siguen `@ExperimentalCoroutinesApi`. Verificado con los starters de las semanas 6 y 7. `debounce` es `@FlowPreview`; `flatMapLatest`, `currentTime`, `runCurrent` y `UnconfinedTestDispatcher` son `@ExperimentalCoroutinesApi`. |
 | kotlinx.serialization (BOM) | 1.12.0 | Último estable en Maven Central y GitHub `Kotlin/kotlinx.serialization` (2026-10-19, sobre Kotlin 2.4.10). Sin avisos de seguridad en GitHub; los 2 resultados de NVD son de `kaml` (YAML de terceros), no de la biblioteca. El plugin `kotlin("plugin.serialization")` lleva la versión de Kotlin (2.4.21). `JsonNamingStrategy` ya es estable; `MissingFieldException` y `@JsonNames` siguen `@ExperimentalSerializationApi`. Verificado con los starters de la semana 8. |
+| `kotlin-dsl` (plugin de Gradle) | 6.7.6, sin pinar aparte | Viene con Gradle 9.8.2: `` `kotlin-dsl` `` se escribe sin versión y se resuelve como `org.gradle.kotlin.kotlin-dsl` 6.7.6 del Gradle Plugin Portal; compila los convention plugins con el Kotlin embebido de Gradle (2.4.10). Sus avisos de seguridad son los de Gradle (primera fila). `build-logic` depende de `org.jetbrains.kotlin:kotlin-gradle-plugin` con la versión de Kotlin (2.4.21), desde Maven Central. Verificado con los starters de la semana 11. |
 | Android Studio | Rabbit 1 (2026.2.1) | La más reciente estable en `developer.android.com/studio/releases` (revisado 2026-10-24); es la que tiene instalada el autor. Quail 4 (2026.1.4) es el mínimo para AGP 9.4. Fijar el build exacto en la semana 15. |
 | JDK | 21 (LTS), Temurin 21.0.12 | Decisión del autor. Compilado y probado con Temurin 21.0.12 (semana 1). AGP 9.4 trae JDK 17 como mínimo y por defecto (notas de la versión, `developer.android.com`, revisado 2026-10-24), así que 21 sirve. |
 | compileSdk / targetSdk | 37 / 36 mínimo Play | Android 17 (API 37) estable desde junio 2026. Play exige targetSdk 36 desde 2026-08-31. |
