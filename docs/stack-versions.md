@@ -1,10 +1,10 @@
 # Versiones del stack
 
-Última revisión: 2026-10-26. Regla: versión completa pinada, nunca `latest`. Antes de fijar una versión: el tag existe, sin CVEs sin parchear, compatibilidad entre piezas.
+Última revisión: 2026-10-27. Regla: versión completa pinada, nunca `latest`. Antes de fijar una versión: el tag existe, sin CVEs sin parchear, compatibilidad entre piezas.
 
 | Pieza | Versión pinada | Verificación |
 |---|---|---|
-| Gradle | 9.8.2 | `services.gradle.org/versions/current` (build 2026-10-19). Avisos GHSA-j5m7-59rp-24f5, GHSA-xwqc-3h47-hg64, GHSA-mvvg-497x-hmj8 afectan `< 8.14.6` y `9.0.0 a 9.8.0`; parchados en 9.8.1. 9.8.2 no afectada. Avisos de enero 2026 (CVE-2026-22816, CVE-2026-22865) parchados en 9.3.0. |
+| Gradle | 9.8.2 | `services.gradle.org/versions/current` (build 2026-10-19). Avisos GHSA-j5m7-59rp-24f5, GHSA-xwqc-3h47-hg64, GHSA-mvvg-497x-hmj8 afectan `< 8.14.6` y `9.0.0 a 9.8.0`; parchados en 9.8.1. 9.8.2 no afectada. Avisos de enero 2026 (CVE-2026-22816, CVE-2026-22865) parchados en 9.3.0. La caché de build y `HttpBuildCache` vienen con Gradle, sin versión propia; el servidor de caché de los tests usa `com.sun.net.httpserver` del JDK, sin dependencias (semana 13). |
 | Kotlin | 2.4.21 | Último estable en GitHub `JetBrains/kotlin` (2026-10-08). Sin avisos de seguridad publicados. 2.5.0-Beta2 existe: no usar. |
 | Android Gradle Plugin | 9.4.1 | Último estable en Google Maven (9.5.0 solo rc, 9.6.0 alpha). Sin CVEs en NVD. Mínimo de Gradle 9.6.0 (tabla oficial), cumplido por 9.8.2. Android Studio mínimo Quail 4 (2026.1.4). |
 | JUnit (BOM) | 6.1.3 | Último en Maven Central. `kotlin-test-junit5` trae 5.10.1 por defecto; se fija el BOM 6.1.3 de forma explícita. Sin avisos de seguridad. Verificado con los 3 starters de la semana 1. |
