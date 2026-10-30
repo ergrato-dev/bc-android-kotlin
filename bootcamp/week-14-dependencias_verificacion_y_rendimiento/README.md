@@ -122,6 +122,6 @@ Tiene que terminar con `BUILD SUCCESSFUL`. Los starters compilan y los tests emp
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 13](../week-13-cache_de_build_local_y_remota/README.md) | **Semana 14** | Semana 15 (próxima tanda) |
+| [Semana 13](../week-13-cache_de_build_local_y_remota/README.md) | **Semana 14** | [Semana 15](../week-15-agp_y_la_primera_app/README.md) |
 
 ← [Volver al inicio del bootcamp](../../README.md)
