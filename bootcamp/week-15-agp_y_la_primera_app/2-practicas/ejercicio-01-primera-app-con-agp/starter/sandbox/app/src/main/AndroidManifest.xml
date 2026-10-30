@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Paso 3: el nombre de la app (android:label, "Bitácora") y la actividad .MainActivity, exportada y con el
+         intent-filter MAIN / LAUNCHER que la pone en el lanzador. -->
+    <application>
+    </application>
+
+</manifest>

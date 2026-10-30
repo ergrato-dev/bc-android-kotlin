@@ -1,6 +1,6 @@
 # Preparar tu máquina
 
-Para la semana 1 necesitas solo tres cosas. Android Studio y el SDK de Android llegan en la fase 3.
+Para la semana 1 necesitas solo tres cosas. Android Studio y el SDK de Android llegan en la fase 3 ([más abajo](#fase-3-el-sdk-de-android)).
 
 | Qué | Versión | Cómo comprobarlo |
 |---|---|---|
@@ -29,3 +29,37 @@ cd bootcamp/week-01-kotlin_toolchain_y_tipos/2-practicas/ejercicio-01-hola-toolc
 ```
 
 La primera vez descarga Gradle (unos 130 MB). Debe mostrar `Gradle 9.8.2`, `Kotlin 2.4.21` y tu JVM.
+
+## Fase 3: el SDK de Android
+
+Desde la semana 15 los builds necesitan el SDK de Android. Android Studio lo instala solo, pero los starters se construyen y se prueban desde la terminal, y así lo hace también el CI. Versiones en [stack-versions.md](stack-versions.md).
+
+1. Descarga las *Command line tools only* de <https://developer.android.com/studio#command-line-tools-only> y descomprímelas en `cmdline-tools/latest` dentro de la carpeta del SDK:
+
+   ```bash
+   export ANDROID_HOME="$HOME/.local/android-sdk"
+   mkdir -p "$ANDROID_HOME/cmdline-tools"
+   unzip commandlinetools-*.zip -d "$ANDROID_HOME/cmdline-tools"
+   mv "$ANDROID_HOME/cmdline-tools/cmdline-tools" "$ANDROID_HOME/cmdline-tools/latest"
+   ```
+
+2. Añade las variables a tu shell (`~/.zshrc` o `~/.bashrc`), para que `./gradlew` las herede:
+
+   ```bash
+   export ANDROID_HOME="$HOME/.local/android-sdk"
+   export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools:$PATH"
+   ```
+
+3. Acepta las licencias e instala los paquetes de la semana 15:
+
+   ```bash
+   sdkmanager --licenses
+   sdkmanager "platforms;android-37.0" "build-tools;36.0.0" "platform-tools"
+   sdkmanager --list_installed
+   ```
+
+Si ya tienes Android Studio, su SDK sirve: apunta `ANDROID_HOME` a la carpeta que muestra en *Settings > Languages & Frameworks > Android SDK*. No uses `local.properties` para esto: tiene una ruta de tu máquina y no va al repositorio.
+
+Si `./gradlew` dice `SDK location not found` después de definir la variable, el daemon de Gradle arrancó sin ella: `./gradlew --stop` y vuelve a ejecutar.
+
+El emulador necesita virtualización por hardware (KVM en Linux, `/dev/kvm`). Si tu máquina no la tiene (algunas máquinas virtuales y WSL2 sin configurar), usa un móvil con la depuración USB activada y `adb`; nada de lo que se evalúa necesita emulador.
