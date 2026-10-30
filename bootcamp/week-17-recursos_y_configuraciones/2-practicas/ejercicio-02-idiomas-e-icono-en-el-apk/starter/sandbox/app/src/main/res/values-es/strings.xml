@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Paso 4: falta una traducción, y lint lo sabe. -->
+<resources>
+    <string name="sync_hint">Sincroniza cuando el móvil tenga cobertura</string>
+</resources>

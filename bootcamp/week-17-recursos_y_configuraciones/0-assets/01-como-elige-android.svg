@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="#e6edf3" font-family="sans-serif" viewBox="0 0 760 330" role="img" aria-labelledby="t d"><title id="t">Cómo elige Android un recurso</title><desc id="d">Una tablet en horizontal pide el número de columnas. Hay cuatro carpetas: values con 1, values-land con 2, values-sw600dp con 3 y values-night con 4. Paso 1: se descarta values-night, porque el móvil no está en modo oscuro. Paso 2: se recorren los calificadores en orden; el ancho mínimo va antes que la orientación, así que al encontrar sw600dp se descartan las que no lo tienen, incluida values-land. Queda values-sw600dp: 3 columnas. Si no quedara ninguna con calificadores, se usaría values.</desc><style>text{font:14px sans-serif;fill:#e6edf3}.b{fill:#16243d;stroke:#58a6ff;stroke-width:2}.g{fill:#0f2d1a;stroke:#3fb950;stroke-width:2}.r{fill:#2d1115;stroke:#f85149;stroke-width:2}.o{fill:none;stroke:#30363d;stroke-width:2;stroke-dasharray:6 5}.s{font-size:12px;fill:#9aa4af}.l{stroke:#9aa4af;stroke-width:2;fill:none}</style><rect width="100%" height="100%" fill="#0d1117" rx="10"/><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#9aa4af"/></marker></defs>
+<rect class="o" x="15" y="15" width="730" height="40" rx="8"/><text x="30" y="40">El móvil: tablet (sw600dp), en horizontal (land), modo claro. Pide R.integer.columns.</text>
+<text x="15" y="85">carpetas</text><text x="265" y="85">1. descarta lo que contradice</text><text x="530" y="85">2. sigue el orden de calificadores</text>
+<rect class="b" x="15" y="100" width="200" height="40" rx="6"/><text x="30" y="125">values · 1</text>
+<rect class="b" x="15" y="150" width="200" height="40" rx="6"/><text x="30" y="175">values-land · 2</text>
+<rect class="b" x="15" y="200" width="200" height="40" rx="6"/><text x="30" y="225">values-sw600dp · 3</text>
+<rect class="b" x="15" y="250" width="200" height="40" rx="6"/><text x="30" y="275">values-night · 4</text>
+<rect class="b" x="265" y="100" width="200" height="40" rx="6"/><text x="280" y="125">values</text>
+<rect class="b" x="265" y="150" width="200" height="40" rx="6"/><text x="280" y="175">values-land</text>
+<rect class="b" x="265" y="200" width="200" height="40" rx="6"/><text x="280" y="225">values-sw600dp</text>
+<rect class="r" x="265" y="250" width="200" height="40" rx="6"/><text x="280" y="275">values-night: no es de noche</text>
+<rect class="r" x="530" y="100" width="215" height="40" rx="6"/><text x="545" y="125">values: sin sw600dp</text>
+<rect class="r" x="530" y="150" width="215" height="40" rx="6"/><text x="545" y="175">values-land: sin sw600dp</text>
+<rect class="g" x="530" y="200" width="215" height="40" rx="6"/><text x="545" y="225">values-sw600dp: 3 columnas</text>
+<text class="s" x="530" y="265">sw600dp va antes que land en el orden:</text><text class="s" x="530" y="282">gana aunque el móvil esté en horizontal</text>
+<text class="s" x="15" y="315">Si al final no queda ninguna carpeta con calificadores, Android usa values/. Si values/ no lo tiene: Resources$NotFoundException.</text></svg>

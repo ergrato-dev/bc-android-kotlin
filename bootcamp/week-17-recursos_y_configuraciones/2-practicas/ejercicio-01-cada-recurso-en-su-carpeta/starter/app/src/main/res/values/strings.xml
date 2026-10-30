@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ya está hecho: los textos por defecto, en inglés. Paso 1: la traducción va en otra carpeta, no aquí. -->
+<resources>
+    <string name="app_name">Field log</string>
+    <string name="sync_hint">Sync when your phone has signal</string>
+    <plurals name="observations">
+        <item quantity="one">%d observation</item>
+        <item quantity="other">%d observations</item>
+    </plurals>
+</resources>
