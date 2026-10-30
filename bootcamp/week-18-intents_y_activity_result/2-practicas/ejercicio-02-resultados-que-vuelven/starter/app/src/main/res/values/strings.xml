@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Field log</string>
+    <string name="change_level">Change level</string>
+    <string name="attach_photo">Attach photo</string>
+    <string name="level">Level: %1$s</string>
+</resources>

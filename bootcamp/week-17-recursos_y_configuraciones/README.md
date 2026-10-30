@@ -119,6 +119,6 @@ Tiene que terminar con `BUILD SUCCESSFUL`. Los starters compilan y los tests emp
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 16](../week-16-actividades_y_ciclo_de_vida/README.md) | **Semana 17** | Semana 18 (próxima tanda) |
+| [Semana 16](../week-16-actividades_y_ciclo_de_vida/README.md) | **Semana 17** | [Semana 18](../week-18-intents_y_activity_result/README.md) |
 
 ← [Volver al inicio del bootcamp](../../README.md)
