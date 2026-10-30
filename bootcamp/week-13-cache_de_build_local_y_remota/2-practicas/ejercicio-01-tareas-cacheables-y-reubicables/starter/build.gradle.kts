@@ -21,6 +21,10 @@ kotlin {
 }
 
 tasks.test {
+    // Los tests construyen sandbox/: si cambia, se vuelven a ejecutar aunque los tests no hayan cambiado.
+    inputs.files(fileTree("sandbox") { exclude("**/build/**", "**/.gradle/**", "**/.kotlin/**") })
+        .withPathSensitivity(PathSensitivity.RELATIVE)
+        .withPropertyName("sandbox")
     useJUnitPlatform()
     testLogging {
         events("passed", "failed")

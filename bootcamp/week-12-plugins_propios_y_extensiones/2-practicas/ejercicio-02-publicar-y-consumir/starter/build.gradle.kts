@@ -24,6 +24,10 @@ gradlePlugin {
 }
 
 tasks.test {
+    // Los tests construyen consumer/: si cambia, se vuelven a ejecutar aunque los tests no hayan cambiado.
+    inputs.files(fileTree("consumer") { exclude("**/build/**", "**/.gradle/**", "**/.kotlin/**") })
+        .withPathSensitivity(PathSensitivity.RELATIVE)
+        .withPropertyName("consumer")
     useJUnitPlatform()
     testLogging {
         events("passed", "failed")
