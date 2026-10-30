@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="#e6edf3" font-family="sans-serif" viewBox="0 0 760 360" role="img" aria-labelledby="t d"><title id="t">El flujo de un permiso</title><desc id="d">El usuario pulsa Ubicar. Si el permiso está concedido, la app ubica. Si no, y Android aconseja explicar y aún no se ha explicado, la app muestra su explicación y espera otro toque. Si no, lanza la petición. Si el usuario concede alguno, la app ubica. Si deniega y shouldShowRequestPermissionRationale es true, dijo que no esta vez y puede volver a intentarlo. Si es false, dijo que no para siempre y la única salida son los ajustes de la app.</desc><style>text{font:14px sans-serif;fill:#e6edf3}.b{fill:#16243d;stroke:#58a6ff;stroke-width:2}.g{fill:#0f2d1a;stroke:#3fb950;stroke-width:2}.f{fill:#2b2110;stroke:#d29922;stroke-width:2}.r{fill:#2d1215;stroke:#f85149;stroke-width:2}.o{fill:none;stroke:#30363d;stroke-width:2;stroke-dasharray:6 5}.s{font-size:12px;fill:#9aa4af}.l{stroke:#9aa4af;stroke-width:2;fill:none}</style><rect width="100%" height="100%" fill="#0d1117" rx="10"/><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#9aa4af"/></marker></defs>
+<rect class="b" x="15" y="20" width="160" height="44" rx="8"/><text x="30" y="47">Pulsa Ubicar</text>
+<rect class="f" x="215" y="20" width="170" height="44" rx="8"/><text x="228" y="47">¿Concedido?</text>
+<rect class="g" x="560" y="20" width="185" height="44" rx="8"/><text x="575" y="47">Ubica</text>
+<path class="l" d="M175 42H210" marker-end="url(#a)"/><path class="l" d="M385 42H555" marker-end="url(#a)"/><text class="s" x="400" y="35">sí</text>
+<rect class="f" x="215" y="100" width="170" height="54" rx="8"/><text x="228" y="122">¿Explicar?</text><text class="s" x="228" y="142">rationale y aún no</text>
+<path class="l" d="M300 64V95" marker-end="url(#a)"/><text class="s" x="308" y="84">no</text>
+<rect class="b" x="15" y="100" width="160" height="54" rx="8"/><text x="30" y="122">Tu explicación</text><text class="s" x="30" y="142">espera otro toque</text>
+<path class="l" d="M215 127H180" marker-end="url(#a)"/><text class="s" x="188" y="120">sí</text>
+<rect class="f" x="215" y="190" width="170" height="44" rx="8"/><text x="228" y="217">launch(...)</text>
+<path class="l" d="M300 154V185" marker-end="url(#a)"/><text class="s" x="308" y="174">no</text>
+<path class="l" d="M385 212H470V64" marker-end="url(#a)"/><text class="s" x="395" y="205">concede alguno</text>
+<rect class="g" x="215" y="270" width="170" height="54" rx="8"/><text x="228" y="292">No esta vez</text><text class="s" x="228" y="312">rationale = true</text>
+<rect class="r" x="430" y="270" width="315" height="54" rx="8"/><text x="445" y="292">No para siempre</text><text class="s" x="445" y="312">rationale = false: abre los ajustes de la app</text>
+<path class="l" d="M300 234V265" marker-end="url(#a)"/><path class="l" d="M330 234V250H587V265" marker-end="url(#a)"/><text class="s" x="308" y="254">deniega</text>
+<text class="s" x="15" y="350">Desde Android 11, dos denegaciones seguidas cuentan como "no para siempre": launch responde sin diálogo.</text></svg>

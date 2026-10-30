@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Field log</string>
+    <string name="locate">Locate</string>
+    <string name="settings">Open settings</string>
+    <string name="idle">No location yet</string>
+    <string name="locating">Locating…</string>
+    <string name="precise">%1$s, %2$s</string>
+    <string name="approximate">About %1$s, %2$s</string>
+    <string name="rationale">The log saves where each observation was made. Tap Locate again to allow it.</string>
+    <string name="denied">Without location, observations have no place. Tap Locate to try again.</string>
+    <string name="denied_forever">Location is off for this app. Turn it on in the settings.</string>
+</resources>
