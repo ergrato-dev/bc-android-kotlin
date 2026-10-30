@@ -1,0 +1,27 @@
+# Ya está hecho (semana 11): un solo catálogo para el build principal y build-logic.
+
+[versions]
+# Paso 1: activity 1.13.0, lifecycle 2.11.0 y, para los tests, junit4 4.13.2, robolectric 4.17, androidx-test-core 1.7.0,
+# androidx-test-junit 1.3.0, android-all "16-robolectric-13921718-i7" y guava "33.7.2-jre". Sus bibliotecas, y un bundle
+# robolectric.
+agp = "9.4.1"
+kotlin = "2.4.21"
+serialization = "1.12.0"
+junit = "6.1.3"
+
+[libraries]
+junit-bom = { module = "org.junit:junit-bom", version.ref = "junit" }
+junit-launcher = { module = "org.junit.platform:junit-platform-launcher" }
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+serialization-bom = { module = "org.jetbrains.kotlinx:kotlinx-serialization-bom", version.ref = "serialization" }
+serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json" }
+android-gradle-plugin = { module = "com.android.tools.build:gradle", version.ref = "agp" }
+kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+
+[bundles]
+testing = ["kotlin-test", "junit-launcher"]
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
