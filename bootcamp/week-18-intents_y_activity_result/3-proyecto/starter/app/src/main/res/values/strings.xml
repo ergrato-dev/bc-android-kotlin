@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Los textos en el idioma del dominio: este archivo es el idioma por defecto (resources.properties).
+     Pasos 3, 5 y 6: los textos nuevos aquí y en values-en. -->
+<resources>
+    <string name="app_name">Bitácora</string>
+    <string name="title">Bitácora %1$s v%2$s</string>
+    <string name="description_hint">Descripción</string>
+    <string name="level_low">Baja</string>
+    <string name="level_medium">Media</string>
+    <string name="level_high">Alta</string>
+    <plurals name="observations">
+        <item quantity="one">%d observación</item>
+        <item quantity="many">%d de observaciones</item>
+        <item quantity="other">%d observaciones</item>
+    </plurals>
+</resources>

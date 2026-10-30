@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Field log</string>
+    <string name="title">Field log %1$s v%2$s</string>
+    <string name="description_hint">Description</string>
+    <string name="level_low">Low</string>
+    <string name="level_medium">Medium</string>
+    <string name="level_high">High</string>
+    <plurals name="observations">
+        <item quantity="one">%d observation</item>
+        <item quantity="other">%d observations</item>
+    </plurals>
+</resources>
