@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="#e6edf3" font-family="sans-serif" viewBox="0 0 760 290" role="img" aria-labelledby="t d"><title id="t">Dónde vive cada dato</title><desc id="d">Tres sitios para un dato de pantalla. Un campo de la actividad no sobrevive ni al giro ni a la muerte del proceso. Una propiedad de un ViewModel sobrevive al giro pero no a la muerte del proceso: sirve para una caché. El SavedStateHandle del ViewModel se guarda en el Bundle y sobrevive a los dos: sirve para el borrador o un id. Lo grande y lo que dura más que la sesión va a una base de datos.</desc><style>text{font:14px sans-serif;fill:#e6edf3}.b{fill:#16243d;stroke:#58a6ff;stroke-width:2}.g{fill:#0f2d1a;stroke:#3fb950;stroke-width:2}.r{fill:#2d1115;stroke:#f85149;stroke-width:2}.f{fill:#2b2110;stroke:#d29922;stroke-width:2}.o{fill:none;stroke:#30363d;stroke-width:2;stroke-dasharray:6 5}.s{font-size:12px;fill:#9aa4af}</style><rect width="100%" height="100%" fill="#0d1117" rx="10"/>
+<text x="260" y="35">giro</text><text x="420" y="35">muerte del proceso</text><text x="600" y="35">para qué</text>
+<rect class="b" x="15" y="50" width="200" height="50" rx="8"/><text x="30" y="73">campo de la actividad</text><text class="s" x="30" y="90">var count = 0</text>
+<rect class="r" x="235" y="50" width="120" height="50" rx="8"/><text x="250" y="80">se pierde</text>
+<rect class="r" x="375" y="50" width="190" height="50" rx="8"/><text x="390" y="80">se pierde</text>
+<text class="s" x="585" y="80">nada que recuperar</text>
+<rect class="b" x="15" y="115" width="200" height="50" rx="8"/><text x="30" y="138">propiedad del ViewModel</text><text class="s" x="30" y="155">var cache: String?</text>
+<rect class="g" x="235" y="115" width="120" height="50" rx="8"/><text x="250" y="145">sobrevive</text>
+<rect class="r" x="375" y="115" width="190" height="50" rx="8"/><text x="390" y="145">se pierde</text>
+<text class="s" x="585" y="138">caché, consulta:</text><text class="s" x="585" y="155">se vuelve a calcular</text>
+<rect class="b" x="15" y="180" width="200" height="50" rx="8"/><text x="30" y="203">SavedStateHandle</text><text class="s" x="30" y="220">state["draft"]</text>
+<rect class="g" x="235" y="180" width="120" height="50" rx="8"/><text x="250" y="210">sobrevive</text>
+<rect class="g" x="375" y="180" width="190" height="50" rx="8"/><text x="390" y="203">sobrevive</text><text class="s" x="390" y="220">viaja en el Bundle</text>
+<text class="s" x="585" y="203">borrador, filtro, id:</text><text class="s" x="585" y="220">poco y sencillo</text>
+<rect class="o" x="15" y="245" width="730" height="35" rx="10"/><text x="30" y="268">Lo grande o lo que dura más que la sesión: a disco o a una base de datos (Room, fase 5).</text></svg>
