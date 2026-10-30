@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Paso 1: los textos de la pantalla, en el idioma de tu dominio (este archivo es el idioma por defecto): el
+     título con formato (%1$s el dominio, %2$s la versión), la pista del campo, un texto por nivel y el plural
+     observations. -->
+<resources>
+    <string name="app_name">Bitácora</string>
+</resources>
