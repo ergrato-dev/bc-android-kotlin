@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bitácora</string>
+    <string name="description">Descripción</string>
+    <string name="characters">%1$d/%2$d</string>
+    <string name="level_low">Baja</string>
+    <string name="level_medium">Media</string>
+    <string name="level_high">Alta</string>
+    <string name="save">Guardar</string>
+    <string name="saved">Guardadas: %d</string>
+</resources>

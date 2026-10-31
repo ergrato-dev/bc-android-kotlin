@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Los textos en el idioma del dominio: este archivo es el idioma por defecto (resources.properties). -->
+<resources>
+    <string name="app_name">Bitácora</string>
+    <string name="title">Bitácora %1$s v%2$s</string>
+    <string name="description_hint">Descripción</string>
+    <string name="level_low">Baja</string>
+    <string name="level_medium">Media</string>
+    <string name="level_high">Alta</string>
+    <string name="observation_item">%1$s · %2$s · %3$s</string>
+    <string name="share">Compartir</string>
+    <string name="locate">Ubicar</string>
+    <string name="no_place">Sin ubicación</string>
+    <string name="locating">Ubicando…</string>
+    <string name="place">%1$s, %2$s</string>
+    <string name="location_denied">Sin permiso de ubicación</string>
+    <string name="photo">Foto</string>
+    <string name="with_photo">Con foto</string>
+    <string name="without_photo">Sin foto</string>
+    <plurals name="observations">
+        <item quantity="one">%d observación</item>
+        <item quantity="many">%d de observaciones</item>
+        <item quantity="other">%d observaciones</item>
+    </plurals>
+</resources>
