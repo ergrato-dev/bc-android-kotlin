@@ -119,6 +119,6 @@ Tiene que terminar con `BUILD SUCCESSFUL`. Los starters compilan y los tests emp
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 19](../week-19-permisos_de_camara_y_ubicacion/README.md) | **Semana 20** | Semana 21 (próxima tanda) |
+| [Semana 19](../week-19-permisos_de_camara_y_ubicacion/README.md) | **Semana 20** | [Semana 21](../week-21-compose_desde_cero_y_estado/README.md) |
 
 ← [Volver al inicio del bootcamp](../../README.md)

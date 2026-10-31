@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="#e6edf3" font-family="sans-serif" viewBox="0 0 760 330" role="img" aria-labelledby="t d"><title id="t">Qué sobrevive a qué</title><desc id="d">Cuatro sitios para el estado y tres sucesos. remember sobrevive a la recomposición, pero no al giro ni a la muerte del proceso. rememberSaveable sobrevive a los tres porque se guarda en el Bundle. Una propiedad del ViewModel sobrevive a la recomposición y al giro, pero no a la muerte del proceso. El SavedStateHandle del ViewModel sobrevive a los tres. Ninguno sobrevive a que el usuario cierre la app: eso es una base de datos.</desc><style>text{font:14px sans-serif;fill:#e6edf3}.b{fill:#16243d;stroke:#58a6ff;stroke-width:2}.g{fill:#0f2d1a;stroke:#3fb950;stroke-width:2}.f{fill:#2b2110;stroke:#d29922;stroke-width:2}.r{fill:#2d1215;stroke:#f85149;stroke-width:2}.o{fill:none;stroke:#30363d;stroke-width:2;stroke-dasharray:6 5}.s{font-size:12px;fill:#9aa4af}.l{stroke:#9aa4af;stroke-width:2;fill:none}.k{stroke:#3fb950;stroke-width:2;fill:none}.e{stroke:#d29922;stroke-width:2;fill:none}</style><rect width="100%" height="100%" fill="#0d1117" rx="10"/><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#9aa4af"/></marker></defs>
+<text x="240" y="40">Recomposición</text><text x="410" y="40">Giro</text><text x="560" y="40">Muerte del proceso</text>
+<rect class="b" x="20" y="60" width="190" height="50" rx="8"/><text x="35" y="90">remember</text>
+<rect class="b" x="20" y="120" width="190" height="50" rx="8"/><text x="35" y="150">rememberSaveable</text>
+<rect class="b" x="20" y="180" width="190" height="50" rx="8"/><text x="35" y="203">Propiedad del</text><text x="35" y="221">ViewModel</text>
+<rect class="b" x="20" y="240" width="190" height="50" rx="8"/><text x="35" y="263">SavedStateHandle</text><text class="s" x="35" y="281">del ViewModel</text>
+<rect class="g" x="240" y="60" width="130" height="50" rx="8"/><text x="285" y="90">sí</text>
+<rect class="r" x="390" y="60" width="130" height="50" rx="8"/><text x="435" y="90">no</text>
+<rect class="r" x="560" y="60" width="180" height="50" rx="8"/><text x="630" y="90">no</text>
+<rect class="g" x="240" y="120" width="130" height="50" rx="8"/><text x="285" y="150">sí</text>
+<rect class="g" x="390" y="120" width="130" height="50" rx="8"/><text x="435" y="150">sí</text>
+<rect class="g" x="560" y="120" width="180" height="50" rx="8"/><text x="575" y="150">sí, en el Bundle</text>
+<rect class="g" x="240" y="180" width="130" height="50" rx="8"/><text x="285" y="210">sí</text>
+<rect class="g" x="390" y="180" width="130" height="50" rx="8"/><text x="405" y="203">sí: no se</text><text class="s" x="405" y="221">destruye</text>
+<rect class="r" x="560" y="180" width="180" height="50" rx="8"/><text x="630" y="210">no</text>
+<rect class="g" x="240" y="240" width="130" height="50" rx="8"/><text x="285" y="270">sí</text>
+<rect class="g" x="390" y="240" width="130" height="50" rx="8"/><text x="435" y="270">sí</text>
+<rect class="g" x="560" y="240" width="180" height="50" rx="8"/><text x="575" y="270">sí, en el Bundle</text>
+<text class="s" x="20" y="315">Ninguno sobrevive a cerrar la app o reiniciar el móvil: eso es una base de datos (fase 5). En el Bundle, solo tipos sencillos y poco.</text></svg>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Solo los textos que cambian en demo: el resto sale de main. -->
+<resources>
+    <string name="app_name">Bitácora demo</string>
+    <string name="title">Bitácora demo %1$s v%2$s</string>
+</resources>
