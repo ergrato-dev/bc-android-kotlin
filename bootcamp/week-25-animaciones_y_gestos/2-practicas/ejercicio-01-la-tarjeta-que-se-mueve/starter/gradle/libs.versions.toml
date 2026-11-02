@@ -1,0 +1,33 @@
+[versions]
+agp = "9.4.1"
+kotlin = "2.4.21"
+activity = "1.13.0"
+compose-bom = "2026.09.00"
+junit4 = "4.13.2"
+robolectric = "4.17"
+guava = "33.7.2-jre"
+android-all = "16-robolectric-13921718-i7"
+androidx-test-core = "1.7.0"
+androidx-test-junit = "1.3.0"
+
+[libraries]
+activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activity" }
+compose-bom = { module = "androidx.compose:compose-bom", version.ref = "compose-bom" }
+compose-material3 = { module = "androidx.compose.material3:material3" }
+compose-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4" }
+compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest" }
+junit4 = { module = "junit:junit", version.ref = "junit4" }
+kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
+robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectric" }
+guava = { module = "com.google.guava:guava", version.ref = "guava" }
+android-all = { module = "org.robolectric:android-all-instrumented", version.ref = "android-all" }
+androidx-test-core = { module = "androidx.test:core", version.ref = "androidx-test-core" }
+androidx-test-junit = { module = "androidx.test.ext:junit", version.ref = "androidx-test-junit" }
+
+[bundles]
+robolectric = ["junit4", "kotlin-test-junit", "robolectric", "androidx-test-core", "androidx-test-junit"]
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }

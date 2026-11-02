@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bitácora</string>
+    <string name="delete">Borrar</string>
+    <string name="deleted">%1$s borrada</string>
+    <string name="undo">Deshacer</string>
+    <string name="level_low">Baja</string>
+    <string name="level_medium">Media</string>
+    <string name="level_high">Alta</string>
+</resources>
