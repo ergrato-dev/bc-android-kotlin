@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bitácora</string>
+    <string name="level_low">Baja</string>
+    <string name="level_medium">Media</string>
+    <string name="level_high">Alta</string>
+    <string name="level_low_short">B</string>
+    <string name="level_medium_short">M</string>
+    <string name="level_high_short">A</string>
+    <string name="code_and_place">%1$s · %2$s</string>
+    <string name="no_place">Sin ubicación</string>
+</resources>

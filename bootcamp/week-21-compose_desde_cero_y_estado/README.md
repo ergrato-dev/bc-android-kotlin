@@ -119,6 +119,6 @@ Tiene que terminar con `BUILD SUCCESSFUL`. Los starters compilan y los tests emp
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 20](../week-20-variantes_flavors_y_firma/README.md) | **Semana 21** | Semana 22 (próxima tanda) |
+| [Semana 20](../week-20-variantes_flavors_y_firma/README.md) | **Semana 21** | [Semana 22](../week-22-layouts_y_listas/README.md) |
 
 ← [Volver al inicio del bootcamp](../../README.md)
