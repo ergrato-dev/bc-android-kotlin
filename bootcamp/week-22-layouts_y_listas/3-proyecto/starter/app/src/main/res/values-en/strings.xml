@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Field log</string>
+    <string name="title">Field log %1$s v%2$s</string>
+    <string name="description_hint">Description</string>
+    <string name="level_low">Low</string>
+    <string name="level_medium">Medium</string>
+    <string name="level_high">High</string>
+    <string name="observation_item">%1$s · %2$s · %3$s</string>
+    <string name="share">Share</string>
+    <string name="locate">Locate</string>
+    <string name="no_place">No location</string>
+    <string name="locating">Locating…</string>
+    <string name="place">%1$s, %2$s</string>
+    <string name="location_denied">No location permission</string>
+    <string name="photo">Photo</string>
+    <string name="with_photo">With photo</string>
+    <string name="without_photo">No photo</string>
+    <plurals name="observations">
+        <item quantity="one">%d observation</item>
+        <item quantity="other">%d observations</item>
+    </plurals>
+</resources>
