@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ya está hecho: los colores de los niveles, de día. No cambian con el fondo de pantalla: dicen lo grave que es una
+     observación. Paso 4: los de noche, en values-night. -->
+<resources>
+    <color name="level_low">#FFB7E1CD</color>
+    <color name="level_medium">#FFFCE8B2</color>
+    <color name="level_high">#FFF4C7C3</color>
+</resources>

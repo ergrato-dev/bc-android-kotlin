@@ -120,6 +120,6 @@ Los starters compilan y los tests empiezan en rojo, salvo en el proyecto los de 
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 21](../week-21-compose_desde_cero_y_estado/README.md) | **Semana 22** | Semana 23 (próxima tanda) |
+| [Semana 21](../week-21-compose_desde_cero_y_estado/README.md) | **Semana 22** | [Semana 23](../week-23-material_3_y_tema/README.md) |
 
 ← [Volver al inicio del bootcamp](../../README.md)
