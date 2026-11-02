@@ -120,6 +120,6 @@ Los starters compilan y los tests empiezan en rojo, salvo en el proyecto los de 
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 22](../week-22-layouts_y_listas/README.md) | **Semana 23** | Semana 24 (próxima tanda) |
+| [Semana 22](../week-22-layouts_y_listas/README.md) | **Semana 23** | [Semana 24](../week-24-navegacion_y_enlaces/README.md) |
 
 ← [Volver al inicio del bootcamp](../../README.md)

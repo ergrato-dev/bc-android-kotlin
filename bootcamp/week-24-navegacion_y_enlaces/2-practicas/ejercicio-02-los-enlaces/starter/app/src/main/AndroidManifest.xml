@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Ya está hecho: el tema de la ventana, de día y de noche (semana 23). -->
+    <!-- Paso 1: MainActivity abre los enlaces bitacora://observation/{código}: un intent-filter con la acción VIEW, las
+         categorías DEFAULT y BROWSABLE, y el esquema y el host. -->
+    <application
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Bitacora">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
