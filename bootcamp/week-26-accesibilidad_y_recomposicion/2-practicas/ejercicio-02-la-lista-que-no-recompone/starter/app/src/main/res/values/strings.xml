@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bitácora</string>
+    <string name="description_hint">Descripción</string>
+    <string name="add">Añadir</string>
+    <string name="up">Arriba</string>
+    <string name="observation_line">%1$s · %2$s · %3$s</string>
+    <string name="level_low">Baja</string>
+    <string name="level_medium">Media</string>
+    <string name="level_high">Alta</string>
+    <string name="level_low_short">B</string>
+    <string name="level_medium_short">M</string>
+    <string name="level_high_short">A</string>
+</resources>

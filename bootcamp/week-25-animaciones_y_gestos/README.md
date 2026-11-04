@@ -120,6 +120,6 @@ Los starters compilan y los tests nuevos empiezan en rojo. Al terminar, `./gradl
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 24](../week-24-navegacion_y_enlaces/README.md) | **Semana 25** | Semana 26 (próxima tanda) |
+| [Semana 24](../week-24-navegacion_y_enlaces/README.md) | **Semana 25** | [Semana 26](../week-26-accesibilidad_y_recomposicion/README.md) |
 
 ← [Volver al inicio del bootcamp](../../README.md)
