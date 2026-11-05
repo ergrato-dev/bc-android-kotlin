@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="#e6edf3" font-family="sans-serif" viewBox="0 0 760 300" role="img" aria-labelledby="t d"><title id="t">La postura de mesa</title><desc id="d">Un plegable medio cerrado, con la bisagra en horizontal, apoyado sobre la mesa. La FoldingFeature está HALF_OPENED y HORIZONTAL, y Posture.isTabletop es true. La bisagra parte la ventana: arriba, hasta bounds.top, el detalle, que se lee; abajo, desde bounds.bottom, la lista, que se toca. En la sonda, a 600 por 800 dp, la bisagra está en y = 400.</desc><style>text{font:14px sans-serif;fill:#e6edf3}.b{fill:#16243d;stroke:#58a6ff;stroke-width:2}.g{fill:#0f2d1a;stroke:#3fb950;stroke-width:2}.f{fill:#2b2110;stroke:#d29922;stroke-width:2}.r{fill:#2d1215;stroke:#f85149;stroke-width:2}.s{font-size:12px;fill:#9aa4af}.l{stroke:#9aa4af;stroke-width:2;fill:none}</style><rect width="100%" height="100%" fill="#0d1117" rx="10"/><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#9aa4af"/></marker></defs>
+<rect class="b" x="40" y="30" width="300" height="120" rx="8"/><text x="60" y="70">detalle</text><text class="s" x="60" y="92">A-2 · hojas amarillas en la parcela 3</text><text class="s" x="60" y="134">de 0 a hinge.top</text>
+<path d="M30 160H350" stroke="#f85149" stroke-width="3" stroke-dasharray="8 6"/>
+<path class="l" d="M40 170L20 250H360L340 170Z"/>
+<text x="110" y="200">lista</text><text class="s" x="110" y="222">A-1 · A-2 · A-3</text>
+<text x="390" y="60">FoldingFeature</text>
+<text class="s" x="390" y="84">state = HALF_OPENED</text>
+<text class="s" x="390" y="104">orientation = HORIZONTAL</text>
+<text class="s" x="390" y="124">bounds = Rect(0, 400 - 600, 400), en píxeles</text>
+<text x="390" y="164">Posture.isTabletop = true</text>
+<text class="s" x="390" y="188">la postura gana al ancho:</text>
+<text class="s" x="390" y="206">arriba y abajo, aunque sea expanded</text>
+<text class="s" x="390" y="246">en los tests: window-testing,</text>
+<text class="s" x="390" y="264">WindowLayoutInfoPublisherRule</text></svg>

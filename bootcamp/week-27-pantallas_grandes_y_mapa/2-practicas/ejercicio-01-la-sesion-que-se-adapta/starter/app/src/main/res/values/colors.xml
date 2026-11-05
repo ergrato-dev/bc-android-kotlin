@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="level_low">#FFC4EED0</color>
+    <color name="level_medium">#FFFFE08A</color>
+    <color name="level_high">#FFF4C7C3</color>
+</resources>
