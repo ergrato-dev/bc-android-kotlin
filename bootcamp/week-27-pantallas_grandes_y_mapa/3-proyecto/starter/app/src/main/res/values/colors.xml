@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Los colores de los niveles no cambian con el fondo de pantalla: dicen lo grave que es una observación. -->
+<resources>
+    <color name="level_low">#FFB7E1CD</color>
+    <color name="level_medium">#FFFCE8B2</color>
+    <color name="level_high">#FFF4C7C3</color>
+</resources>

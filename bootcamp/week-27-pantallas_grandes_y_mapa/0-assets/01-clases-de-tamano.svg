@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="#e6edf3" font-family="sans-serif" viewBox="0 0 760 260" role="img" aria-labelledby="t d"><title id="t">Las clases de tamaño</title><desc id="d">El ancho de la ventana, en dp, se reparte en tramos: compact por debajo de 600, medium de 600 a 840, expanded de 840 a 1200, y large y extra-large por encima. Un móvil en vertical es compact; un plegable abierto en vertical, medium; una tableta en horizontal, expanded. En compact y medium, un panel; desde expanded, dos.</desc><style>text{font:14px sans-serif;fill:#e6edf3}.b{fill:#16243d;stroke:#58a6ff;stroke-width:2}.g{fill:#0f2d1a;stroke:#3fb950;stroke-width:2}.f{fill:#2b2110;stroke:#d29922;stroke-width:2}.r{fill:#2d1215;stroke:#f85149;stroke-width:2}.s{font-size:12px;fill:#9aa4af}.l{stroke:#9aa4af;stroke-width:2;fill:none}</style><rect width="100%" height="100%" fill="#0d1117" rx="10"/><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#9aa4af"/></marker></defs>
+<text x="30" y="36">ancho de la ventana (dp)</text>
+<rect class="b" x="30" y="56" width="200" height="56" rx="8"/><text x="46" y="80">compact</text><text class="s" x="46" y="100">menos de 600</text>
+<rect class="f" x="240" y="56" width="160" height="56" rx="8"/><text x="256" y="80">medium</text><text class="s" x="256" y="100">600 a 840</text>
+<rect class="g" x="410" y="56" width="180" height="56" rx="8"/><text x="426" y="80">expanded</text><text class="s" x="426" y="100">840 a 1200</text>
+<rect class="g" x="600" y="56" width="130" height="56" rx="8"/><text x="616" y="80">large, XL</text><text class="s" x="616" y="100">1200 o más</text>
+<text class="s" x="46" y="140">móvil en vertical</text><text class="s" x="46" y="158">Robolectric: 320</text>
+<text class="s" x="256" y="140">plegable abierto,</text><text class="s" x="256" y="158">en vertical</text>
+<text class="s" x="426" y="140">tableta en horizontal</text><text class="s" x="426" y="158">w900dp en los tests</text>
+<text class="s" x="616" y="140">escritorio</text>
+<path class="l" d="M30 190H400"/><text x="150" y="214">un panel</text>
+<path class="l" d="M410 190H730"/><text x="520" y="214">dos paneles</text>
+<text class="s" x="30" y="244">La orientación no cuenta: un móvil en horizontal mide unos 800 dp, y sigue siendo medium.</text></svg>

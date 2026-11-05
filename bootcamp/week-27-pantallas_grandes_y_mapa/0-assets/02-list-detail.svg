@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="#e6edf3" font-family="sans-serif" viewBox="0 0 760 300" role="img" aria-labelledby="t d"><title id="t">El list-detail</title><desc id="d">El back stack es el mismo en el móvil y en la tableta: la sesión y la observación A-2. En compact y en medium, NavDisplay pinta solo la última entrada, A-2. En expanded, ListDetailSceneStrategy hace una escena con las dos: la sesión a la izquierda, de 0 a 360 dp, y A-2 a la derecha. Si el back stack solo tiene la sesión, a la derecha va el hueco, Elige una observación.</desc><style>text{font:14px sans-serif;fill:#e6edf3}.b{fill:#16243d;stroke:#58a6ff;stroke-width:2}.g{fill:#0f2d1a;stroke:#3fb950;stroke-width:2}.f{fill:#2b2110;stroke:#d29922;stroke-width:2}.r{fill:#2d1215;stroke:#f85149;stroke-width:2}.s{font-size:12px;fill:#9aa4af}.l{stroke:#9aa4af;stroke-width:2;fill:none}</style><rect width="100%" height="100%" fill="#0d1117" rx="10"/><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#9aa4af"/></marker></defs>
+<text x="30" y="36">back stack</text>
+<rect class="b" x="30" y="50" width="120" height="44" rx="8"/><text x="46" y="77">SessionKey</text>
+<rect class="b" x="160" y="50" width="150" height="44" rx="8"/><text x="176" y="77">ObservationKey(A-2)</text>
+<path class="l" d="M170 94V140" marker-end="url(#a)"/><path class="l" d="M240 94L480 140" marker-end="url(#a)"/>
+<text class="s" x="30" y="130">compact y medium: la última</text>
+<rect class="f" x="80" y="150" width="180" height="120" rx="8"/><text x="96" y="176">A-2</text><text class="s" x="96" y="196">hojas amarillas...</text><text class="s" x="96" y="256">atrás: la sesión</text>
+<text class="s" x="440" y="130">expanded: ListDetailSceneStrategy, las dos</text>
+<rect class="g" x="330" y="150" width="400" height="120" rx="8"/>
+<rect class="b" x="342" y="162" width="150" height="96" rx="6"/><text x="354" y="186">sesión</text><text class="s" x="354" y="206">listPane</text><text class="s" x="354" y="246">0 a 360 dp</text>
+<rect class="b" x="504" y="162" width="214" height="96" rx="6"/><text x="516" y="186">A-2</text><text class="s" x="516" y="206">detailPane</text><text class="s" x="516" y="246">sin detalle: el hueco</text></svg>

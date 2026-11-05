@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bitácora</string>
+    <string name="choose">Elige una observación</string>
+    <string name="level_low">Baja</string>
+    <string name="level_medium">Media</string>
+    <string name="level_high">Alta</string>
+    <string name="level_low_short">B</string>
+    <string name="level_medium_short">M</string>
+    <string name="level_high_short">A</string>
+</resources>
