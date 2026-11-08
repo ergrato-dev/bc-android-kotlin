@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="#e6edf3" font-family="sans-serif" viewBox="0 0 760 320" role="img" aria-labelledby="t d"><title id="t">El ciclo de MVI</title><desc id="d">La pantalla manda un intent, por ejemplo Delete A-1, a onIntent del ViewModel. El ViewModel llama a reduce con el estado de antes y el intent; reduce devuelve el estado nuevo y, como mucho, un efecto. El estado nuevo va al StateFlow, que la pantalla pinta. Si la lista cambió, el ViewModel llama a repository.save. El efecto, ShowUndo A-1, va por un Channel a la actividad, que enseña el aviso.</desc><style>text{font:14px sans-serif;fill:#e6edf3}.b{fill:#16243d;stroke:#58a6ff;stroke-width:2}.g{fill:#0f2d1a;stroke:#3fb950;stroke-width:2}.f{fill:#2b2110;stroke:#d29922;stroke-width:2}.r{fill:#2d1215;stroke:#f85149;stroke-width:2}.s{font-size:12px;fill:#9aa4af}.l{stroke:#9aa4af;stroke-width:2;fill:none}</style><rect width="100%" height="100%" fill="#0d1117" rx="10"/><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#9aa4af"/></marker></defs>
+<rect class="b" x="30" y="40" width="180" height="90" rx="8"/><text x="50" y="68">Pantalla (Compose)</text><text class="s" x="50" y="92">pinta BitacoraUiState</text><text class="s" x="50" y="112">cuenta lo que pasa</text>
+<rect class="f" x="340" y="40" width="180" height="90" rx="8"/><text x="356" y="68">BitacoraViewModel</text><text class="s" x="356" y="92">onIntent(intent)</text><text class="s" x="356" y="112">guarda, avisa</text>
+<rect class="g" x="560" y="40" width="170" height="90" rx="8"/><text x="580" y="68">reduce</text><text class="s" x="580" y="92">(estado, intent)</text><text class="s" x="580" y="112">→ Next(estado, efecto?)</text>
+<path class="l" d="M210 70H338" marker-end="url(#a)"/><text class="s" x="222" y="62">Delete("A-1")</text>
+<path class="l" d="M520 70H558" marker-end="url(#a)"/>
+<path class="l" d="M558 110H522" marker-end="url(#a)"/>
+<path class="l" d="M340 120H212" marker-end="url(#a)"/><text class="s" x="222" y="112">StateFlow: el estado</text>
+<rect class="b" x="340" y="210" width="180" height="70" rx="8"/><text x="356" y="238">ObservationRepository</text><text class="s" x="356" y="262">save(observations)</text>
+<path class="l" d="M430 130V208" marker-end="url(#a)"/><text class="s" x="440" y="176">si la lista es otra (!==)</text>
+<rect class="r" x="30" y="210" width="200" height="70" rx="8"/><text x="50" y="238">Activity: LaunchedEffect</text><text class="s" x="50" y="262">"A-1 borrada · Deshacer"</text>
+<path class="l" d="M350 130L180 208" marker-end="url(#a)"/><text class="s" x="30" y="168">Channel: ShowUndo("A-1"), una vez</text>
+</svg>
