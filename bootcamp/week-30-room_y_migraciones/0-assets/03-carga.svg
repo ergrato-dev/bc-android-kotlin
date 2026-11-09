@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="#e6edf3" font-family="sans-serif" viewBox="0 0 760 300" role="img" aria-labelledby="t d"><title id="t">La primera carga</title><desc id="d">Dos carriles en el tiempo. En el hilo principal: onCreate crea el ViewModel y empieza a recoger; el primer fotograma sale con loaded en false y la actividad no pinta nada; cuando llega la lista, loaded pasa a true, se resuelve el enlace con la lista entera y se pinta. En Dispatchers.IO: Room abre la base de datos, la crea e importa el JSON si es la primera vez, y hace la consulta. La flecha de vuelta deja la lista para el hilo principal. En Robolectric, el hilo principal es el del test, y hay que atenderlo para que la lista llegue.</desc><style>text{font:14px sans-serif;fill:#e6edf3}.b{fill:#16243d;stroke:#58a6ff;stroke-width:2}.g{fill:#0f2d1a;stroke:#3fb950;stroke-width:2}.f{fill:#2b2110;stroke:#d29922;stroke-width:2}.r{fill:#2d1215;stroke:#f85149;stroke-width:2}.s{font-size:12px;fill:#9aa4af}.l{stroke:#9aa4af;stroke-width:2;fill:none}.c{fill:none;stroke:#30363d;stroke-width:2;stroke-dasharray:6 4}</style><rect width="100%" height="100%" fill="#0d1117" rx="10"/><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#9aa4af"/></marker></defs>
+<text class="s" x="20" y="60">hilo principal</text><path class="c" d="M20 80H740"/>
+<text class="s" x="20" y="200">Dispatchers.IO</text><path class="c" d="M20 220H740"/>
+<rect class="b" x="40" y="96" width="160" height="60" rx="8"/><text x="56" y="120">onCreate</text><text class="s" x="56" y="140">ViewModel, collect</text>
+<rect class="r" x="230" y="96" width="190" height="60" rx="8"/><text x="246" y="120">primer fotograma</text><text class="s" x="246" y="140">loaded = false: nada</text>
+<rect class="g" x="520" y="96" width="220" height="60" rx="8"/><text x="536" y="120">loaded = true</text><text class="s" x="536" y="140">startOf(intent), pintar</text>
+<rect class="f" x="160" y="236" width="340" height="50" rx="8"/><text x="176" y="258">abrir · onCreate si es nueva · SELECT</text><text class="s" x="176" y="276">Room, en otro hilo</text>
+<path class="l" d="M120 156C120 200 150 230 160 250" marker-end="url(#a)"/>
+<path class="l" d="M500 250C540 230 600 200 620 156" marker-end="url(#a)"/><text class="s" x="560" y="200">la lista</text>
+<path class="l" d="M200 126H230" marker-end="url(#a)"/>
+<text class="s" x="20" y="28">Con el JSON, la lista estaba antes del primer fotograma. Con Room, llega después.</text>
+</svg>
