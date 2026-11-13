@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="help_title">Ayuda</string>
+    <string name="help_body">Desliza una observación para borrarla. Hoy, %1$s.</string>
+    <plurals name="tips">
+        <item quantity="one">%d consejo</item>
+        <item quantity="other">%d consejos</item>
+    </plurals>
+</resources>

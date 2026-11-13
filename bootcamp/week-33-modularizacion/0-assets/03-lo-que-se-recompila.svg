@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="#e6edf3" font-family="sans-serif" viewBox="0 0 760 400" role="img" aria-labelledby="t d"><title id="t">Lo que se recompila al cambiar el mapa</title><desc id="d">El mismo cambio, el padding de MapScreen, medido en dos Bitácoras. Izquierda, la de la semana 32, con el mapa en la app: se ejecutan kspFieldDebugKotlin, compileFieldDebugKotlin, hiltCollectClassesFieldDebug, transformFieldDebugClassesWithAsm, dexBuilderFieldDebug, mergeProjectDexFieldDebug y packageFieldDebug. Derecha, la de la semana 33, con el mapa en su módulo: se ejecutan feature map compileDebugKotlin, sus bundleLib, app mergeLibDexFieldDebug y packageFieldDebug; app compileFieldDebugKotlin sale UP-TO-DATE porque la ABI del mapa no ha cambiado.</desc><style>text{font:14px sans-serif;fill:#e6edf3}.b{fill:#16243d;stroke:#58a6ff;stroke-width:2}.f{fill:#2b2110;stroke:#d29922;stroke-width:2}.h{fill:#161b22;stroke:#30363d;stroke-width:2}.s{font-size:12px;fill:#9aa4af}.o{font-size:13px;fill:#d29922}.u{font-size:13px;fill:#6e7681}</style><rect width="100%" height="100%" fill="#0d1117" rx="10"/>
+<text x="20" y="34">Cambia el cuerpo de MapScreen (medido, AGP 9.4.1)</text>
+<rect class="h" x="20" y="54" width="350" height="326" rx="8"/><text x="36" y="80">Semana 32: el mapa en :app</text>
+<text class="o" x="36" y="116">:app:kspFieldDebugKotlin</text>
+<text class="o" x="36" y="142">:app:compileFieldDebugKotlin</text>
+<text class="o" x="36" y="168">:app:hiltCollectClassesFieldDebug</text>
+<text class="o" x="36" y="194">:app:transformFieldDebugClassesWithAsm</text>
+<text class="o" x="36" y="220">:app:dexBuilderFieldDebug</text>
+<text class="o" x="36" y="246">:app:mergeProjectDexFieldDebug</text>
+<text class="o" x="36" y="272">:app:packageFieldDebug</text>
+<text class="s" x="36" y="350">crece con el tamaño de la app</text>
+<rect class="h" x="390" y="54" width="350" height="326" rx="8"/><text x="406" y="80">Semana 33: el mapa en :feature:map</text>
+<text class="o" x="406" y="116">:feature:map:compileDebugKotlin</text>
+<text class="o" x="406" y="142">:feature:map:bundleLib…</text>
+<text class="o" x="406" y="168">:app:mergeLibDexFieldDebug</text>
+<text class="o" x="406" y="194">:app:packageFieldDebug</text>
+<text class="u" x="406" y="234">:app:compileFieldDebugKotlin UP-TO-DATE</text>
+<text class="u" x="406" y="260">:app:dexBuilderFieldDebug UP-TO-DATE</text>
+<text class="u" x="406" y="286">:core:* UP-TO-DATE</text>
+<text class="s" x="406" y="334">la firma de MapScreen no cambia:</text>
+<text class="s" x="406" y="350">crece con el tamaño del módulo</text>
+</svg>

@@ -119,6 +119,6 @@ Los starters compilan y los tests nuevos empiezan en rojo. Al terminar, `./gradl
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 31](../week-31-red_con_ktor/README.md) | **Semana 32** | Semana 33 (próxima tanda) |
+| [Semana 31](../week-31-red_con_ktor/README.md) | **Semana 32** | [Semana 33](../week-33-modularizacion/README.md) |
 
 ← [Volver al inicio del bootcamp](../../README.md)

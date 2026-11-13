@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="help_title">Help</string>
+    <string name="help_body">Swipe an observation to delete it. Today, %1$s.</string>
+    <!-- TODO (paso 3): el plural tips en inglés. -->
+</resources>
