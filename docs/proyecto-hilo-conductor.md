@@ -1,6 +1,6 @@
 # Proyecto hilo conductor: Bitácora de campo
 
-Una app Android para registrar visitas e inspecciones en campo: observaciones con fotos, GPS y notas, que funciona **sin conexión** y sincroniza después. Cada semana añade una capa al mismo sistema. El dominio (agro, construcción, etc.) lo eliges en [dominios.md](dominios.md).
+Una app Android para registrar visitas e inspecciones en campo: observaciones con fotos, GPS y notas, que funciona **sin conexión** y sincroniza después. Cada semana añade una capa al mismo sistema. El dominio (agro, construcción, etc.) te lo asigna el instructor.
 
 | Fase | Qué crece |
 |---|---|

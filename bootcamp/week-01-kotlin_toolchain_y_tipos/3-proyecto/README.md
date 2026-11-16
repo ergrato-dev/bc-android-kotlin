@@ -4,7 +4,7 @@
 
 ## Qué construyes
 
-El módulo de datos y de informes de una **Bitácora de campo** para tu dominio (lista en [`docs/dominios.md`](../../../docs/dominios.md)). Todavía no hay pantallas ni base de datos: solo Kotlin puro, bien tipado y probado.
+El módulo de datos y de informes de una **Bitácora de campo** para tu dominio (te lo asigna el instructor). Todavía no hay pantallas ni base de datos: solo Kotlin puro, bien tipado y probado.
 
 ## Pasos
 
