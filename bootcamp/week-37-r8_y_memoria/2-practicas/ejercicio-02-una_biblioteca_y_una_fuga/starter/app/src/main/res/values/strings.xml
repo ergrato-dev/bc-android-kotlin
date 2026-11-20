@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sensores</string>
+    <!-- Ya está hecho: las sondas de la app, por el nombre de su clase. El código no las nombra. -->
+    <string-array name="probes">
+        <item>dev.bitacora.Humidity</item>
+        <item>dev.bitacora.Temperature</item>
+    </string-array>
+</resources>
