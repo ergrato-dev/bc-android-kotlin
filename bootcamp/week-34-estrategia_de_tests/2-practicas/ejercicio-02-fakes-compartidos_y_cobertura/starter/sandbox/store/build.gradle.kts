@@ -1,0 +1,20 @@
+plugins {
+    kotlin("jvm")
+    `java-library`
+}
+
+dependencies {
+    api("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.11.0")
+    testImplementation(platform("org.junit:junit-bom:6.1.3"))
+    testImplementation(kotlin("test"))
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.11.0")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+}
+
+kotlin {
+    jvmToolchain(21)
+}
+
+tasks.test {
+    useJUnitPlatform()
+}
