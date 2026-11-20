@@ -1,0 +1,158 @@
+package dev.bitacora
+
+import android.content.res.Resources
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.FlowRow
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material3.Button
+import androidx.compose.material3.FilterChip
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalResources
+import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.LiveRegionMode
+import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.liveRegion
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.text.input.KeyboardCapitalization
+import androidx.compose.ui.unit.dp
+import dev.bitacora.model.Level
+import dev.bitacora.model.MAX_DESCRIPTION
+import dev.bitacora.model.Observation
+import dev.bitacora.model.countByLevel
+import dev.bitacora.data.ListSettings
+// La R de la app no tiene los textos del mapa: son de :feature:map, y en AGP 9 la R no es transitiva.
+import dev.bitacora.map.R as MapR
+
+// La pantalla principal, sin estado: pinta lo que recibe y avisa de lo que hace el usuario.
+// Arriba, fijos, el título, el campo, la ubicación con "Ubicar" a su derecha, los niveles repartidos a partes iguales y
+// el resumen. Abajo, fijo, "Compartir". En medio, la lista, con el alto que sobra y el código como clave.
+@Composable
+fun BitacoraScreen(
+    title: String,
+    state: BitacoraUiState,
+    onDraftChange: (String) -> Unit,
+    onLocate: () -> Unit,
+    onAdd: (Level) -> Unit,
+    onOpen: (Observation) -> Unit,
+    onShare: () -> Unit,
+    onMap: () -> Unit = {},
+    onRefresh: () -> Unit = {},
+    onDelete: (Observation) -> Unit = {},
+    onSettingsChange: (ListSettings) -> Unit = {},
+    // El aviso de "borrada" lo enseña quien recibe los efectos: la pantalla solo le hace sitio.
+    snackbar: SnackbarHostState = remember { SnackbarHostState() },
+) {
+    val resources = LocalResources.current
+    val tooLong = state.draft.length > MAX_DESCRIPTION
+    Surface(Modifier.fillMaxSize()) {
+        Box {
+            Column(Modifier.padding(16.dp)) {
+                Text(title, Modifier.semantics { heading() }, style = MaterialTheme.typography.titleLarge)
+                OutlinedTextField(
+                    value = state.draft,
+                    onValueChange = onDraftChange,
+                    label = { Text(stringResource(R.string.description_hint)) },
+                    supportingText = if (tooLong) {
+                        { Text(stringResource(R.string.counter, state.draft.length, MAX_DESCRIPTION)) }
+                    } else null,
+                    isError = tooLong,
+                    keyboardOptions = KeyboardOptions(capitalization = KeyboardCapitalization.Sentences),
+                    modifier = Modifier.fillMaxWidth(),
+                )
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text(placeText(state), Modifier.weight(1f))
+                    Button(onClick = onLocate) { Text(stringResource(R.string.locate)) }
+                }
+                // Semana 35: con 320 dp, el relleno de 24 dp por lado de Button dejaba 40 dp para el texto, y "Media" se
+                // partía en dos líneas. Lo encontró una captura de Roborazzi; ningún test con aserciones lo veía.
+                Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                    for (level in Level.entries) {
+                        Button(
+                            onClick = { onAdd(level) },
+                            Modifier.weight(1f),
+                            enabled = state.draft.isNotBlank() && !tooLong,
+                            contentPadding = PaddingValues(horizontal = 8.dp),
+                        ) { Text(stringResource(level.label)) }
+                    }
+                }
+                Text(
+                    resources.summary(state.observations),
+                    Modifier.semantics { liveRegion = LiveRegionMode.Polite },
+                    style = MaterialTheme.typography.titleMedium,
+                )
+                // Los filtros solo cambian lo que se ve: la lista entera sigue en el estado.
+                val settings = state.settings
+                Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                    FilterChip(
+                        selected = settings.newestFirst,
+                        onClick = { onSettingsChange(settings.copy(newestFirst = !settings.newestFirst)) },
+                        label = { Text(stringResource(R.string.newest_first)) },
+                    )
+                    FilterChip(
+                        selected = settings.onlyHigh,
+                        onClick = { onSettingsChange(settings.copy(onlyHigh = !settings.onlyHigh)) },
+                        label = { Text(stringResource(R.string.only_high)) },
+                    )
+                }
+                // Semana 35: la lista no tiene texto propio; los tests (y UiAutomator, con testTagsAsResourceId) la buscan por su tag.
+                LazyColumn(Modifier.weight(1f).testTag("observations")) {
+                    items(state.visible(), key = { it.code }) { observation ->
+                        SwipeToDelete({ onDelete(observation) }, Modifier.animateItem()) { actions ->
+                            ObservationRow(observation, { onOpen(observation) }, actions)
+                        }
+                    }
+                }
+                // FlowRow: con 320 dp, los tres botones no caben en una fila y el tercero baja.
+                FlowRow(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                    Button(onClick = onShare) { Text(stringResource(R.string.share)) }
+                    Button(onClick = onMap) { Text(stringResource(MapR.string.map)) }
+                    Button(onClick = onRefresh, enabled = !state.refreshing) { Text(stringResource(R.string.refresh)) }
+                }
+            }
+            SnackbarHost(snackbar, Modifier.align(Alignment.BottomCenter))
+        }
+    }
+}
+
+// Con posición, las coordenadas; sin ella, en qué está la ubicación.
+@Composable
+private fun placeText(state: BitacoraUiState): String {
+    val position = state.position
+    return if (position != null) stringResource(R.string.place, position.latitude.toString(), position.longitude.toString())
+    else stringResource(
+        when (state.locating) {
+            Locating.IDLE -> R.string.no_place
+            Locating.LOCATING -> R.string.locating
+            Locating.DENIED -> R.string.location_denied
+        },
+    )
+}
+
+// Fuera de Compose: la actividad también los usa para compartir.
+fun Resources.summary(observations: List<Observation>): String {
+    val total = getQuantityString(R.plurals.observations, observations.size, observations.size)
+    val levels = observations.countByLevel().entries.joinToString(" · ") { "${getString(it.key.label)}: ${it.value}" }
+    return "$total · $levels"
+}
+
+fun Resources.line(observation: Observation): String =
+    getString(R.string.observation_item, observation.code, getString(observation.level.label), observation.description)
