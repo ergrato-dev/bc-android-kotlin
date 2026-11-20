@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Parte de campo</string>
+    <string name="note_hint">Qué has visto</string>
+    <string name="send">Enviar</string>
+    <string name="photo">Foto</string>
+    <string name="no_photo">Sin foto</string>
+    <string name="with_photo">Con foto</string>
+    <string name="photo_description">La foto del parte</string>
+    <string name="subject">Parte de campo</string>
+</resources>
