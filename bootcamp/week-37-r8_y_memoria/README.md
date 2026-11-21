@@ -125,6 +125,6 @@ Los starters compilan y los tests nuevos empiezan en rojo. Al terminar, `./gradl
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 36](../week-36-macrobenchmark_y_baseline_profiles/README.md) | **Semana 37** | Semana 38 (próxima tanda) |
+| [Semana 36](../week-36-macrobenchmark_y_baseline_profiles/README.md) | **Semana 37** | [Semana 38](../week-38-seguridad/README.md) |
 
 ← [Volver al inicio del bootcamp](../../README.md)

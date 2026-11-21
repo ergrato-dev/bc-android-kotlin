@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- El servidor de alertas todavía va por http: sin esto, Android no deja salir la petición. -->
+    <application
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Material.Light.NoActionBar"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- La abre la notificación de una alerta. -->
+        <activity
+            android:name=".DetailActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="dev.bitacora.alertas.OPEN_ALERT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- Recibe las alertas nuevas y las enseña como notificación. -->
+        <receiver
+            android:name=".AlertReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="dev.bitacora.alertas.NEW_ALERT" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Alertas</string>
+    <string name="alerts">Alertas de plaga</string>
+    <string name="refresh">Actualizar</string>
+    <string name="try_alert">Probar una alerta</string>
+    <!-- La clave del servidor de alertas. -->
+    <string name="alerts_key" translatable="false">ak_live_7Qm2xV9pLr4tZ8sW</string>
+</resources>
